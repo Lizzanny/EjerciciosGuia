@@ -11,7 +11,8 @@ import java.util.Scanner;
  *
  * @author LizzW
  * 
- * Dada una cantidad de grados centígrados se debe mostrar su equivalente en grados Fahrenheit. La fórmula correspondiente es: F = 32 + (9 * C / 5).
+ * Dada una cantidad de grados centígrados se debe mostrar su equivalente en grados Fahrenheit. 
+ * La fórmula correspondiente es: F = 32 + (9 * C / 5).
  */
 public class Ejercicio4 {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class Ejercicio4 {
         
         System.out.println("¿Cuantos grados centigrados?");
         c = sc.nextDouble();
-        System.out.println("Elequivalente de "+ c + "°C es "+convertir(c)+"°F");
+        System.out.println("El equivalente de "+ c + "°C es "+convertir(c)+"°F");
     }
     
     public static double convertir(double c){

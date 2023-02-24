@@ -10,12 +10,24 @@ import java.util.Scanner;
 /**
  *
  * @author LizzW
+ *
+ * Realizar un programa que pida dos números enteros positivos por teclado y
+ * muestre por pantalla el siguiente menú: El usuario deberá elegir una opción y
+ * el programa deberá mostrar el resultado por pantalla y luego volver al menú.
+ * El programa deberá ejecutarse hasta que se elija la opción 5. Tener en cuenta
+ * que, si el usuario selecciona la opción 5, en vez de salir del programa
+ * directamente, se debe mostrar el siguiente mensaje de confirmación: ¿Está
+ * seguro que desea salir del programa (S/N)? Si el usuario selecciona el
+ * carácter ‘S’ se sale del programa, caso contrario se vuelve a mostrar el
+ * menú.
  */
 public class Ejercicio11 {
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
         // TODO code application logic here
-            Scanner input = new Scanner(System.in);
-        int num1, num2, opcion, resultado;
+        Scanner input = new Scanner(System.in);
+        int  opcion;
+        double  num1, num2, resultado;
         char confirmacion;
 
         do {
@@ -32,33 +44,33 @@ public class Ejercicio11 {
             switch (opcion) {
                 case 1:
                     System.out.print("Ingrese el primer número: ");
-                    num1 = input.nextInt();
+                    num1 = input.nextDouble();
                     System.out.print("Ingrese el segundo número: ");
-                    num2 = input.nextInt();
+                    num2 = input.nextDouble();
                     resultado = num1 + num2;
                     System.out.println("El resultado de la suma es: " + resultado);
                     break;
                 case 2:
                     System.out.print("Ingrese el primer número: ");
-                    num1 = input.nextInt();
+                    num1 = input.nextDouble();
                     System.out.print("Ingrese el segundo número: ");
-                    num2 = input.nextInt();
+                    num2 = input.nextDouble();
                     resultado = num1 - num2;
                     System.out.println("El resultado de la resta es: " + resultado);
                     break;
                 case 3:
                     System.out.print("Ingrese el primer número: ");
-                    num1 = input.nextInt();
+                    num1 = input.nextDouble();
                     System.out.print("Ingrese el segundo número: ");
-                    num2 = input.nextInt();
+                    num2 = input.nextDouble();
                     resultado = num1 * num2;
                     System.out.println("El resultado de la multiplicación es: " + resultado);
                     break;
                 case 4:
                     System.out.print("Ingrese el primer número: ");
-                    num1 = input.nextInt();
+                    num1 = input.nextDouble();
                     System.out.print("Ingrese el segundo número: ");
-                    num2 = input.nextInt();
+                    num2 = input.nextDouble();
                     if (num2 == 0) {
                         System.out.println("No se puede dividir por cero.");
                     } else {
@@ -73,8 +85,8 @@ public class Ejercicio11 {
                         System.out.println("Saliendo del programa...");
                         System.exit(0);
                         break;
-                    }else{
-                        opcion=0;
+                    } else {
+                        opcion = 0;
                     }
                 default:
                     System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
